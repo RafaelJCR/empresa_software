@@ -1766,4 +1766,12 @@ textarea.input-field {
 
   .footer-top .container { grid-template-columns: 1.4fr 1fr 1fr 1.6fr; }
 
+}/* Para pantallas menores a 768px (móviles) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .contenedor {
+    flex-direction: column;
+  }
 }
