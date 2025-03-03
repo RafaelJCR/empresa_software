@@ -15,7 +15,23 @@
 \*-----------------------------------*/
 
 :root {
-
+  .food-menu-list .food-menu-card .card-banner img {
+    width: 100%;             /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: 300px;           /* Ajusta la altura de las imágenes para que sean más grandes (puedes modificar el valor según lo que necesites) */
+    object-fit: cover;       /* Mantiene la proporción de la imagen y recorta si es necesario para llenar el espacio */
+    border-radius: 10px;     /* Redondea las esquinas de la imagen (opcional, si quieres mejorar la estética) */
+  }
+  
+  .food-menu-card .card-banner {
+    position: relative;      /* Asegura que el contenedor de la imagen no se desplace al ajustar el tamaño */
+    overflow: hidden;        /* Asegura que las imágenes no se salgan del contenedor */
+  }
+  
+  .food-menu-card .card-banner img:hover {
+    transform: scale(1.05);  /* Efecto de agrandamiento cuando el usuario pasa el ratón sobre la imagen */
+    transition: transform 0.4s ease;  /* Transición suave para el efecto de hover */
+  }
+  
   /**
    * colors
    */
@@ -171,8 +187,6 @@ body.active { overflow: hidden; }
 ::-webkit-scrollbar-thumb { background-color: var(--deep-saffron); }
 
 ::-webkit-scrollbar-thumb:hover { background-color: var(--tangerine); }
-
-
 
 
 
