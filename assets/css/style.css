@@ -1789,3 +1789,49 @@ textarea.input-field {
     flex-direction: column;
   }
 }
+/* imagen de pc areglo */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+/* arreglo de foto de quienes somos  */
+.about-banner {
+  display: flex;
+  justify-content: flex-start; /* Mueve la imagen hacia la izquierda */
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  padding-left: 10%; /* Ajusta según necesites */
+}
+
+.about-banner img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.abs-img-scale-up-anim {
+  position: relative; /* Asegura que puedas mover la imagen sin afectar otros elementos */
+  left: -20px; /* Ajusta este valor según sea necesario */
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.abs-img {
+  position: relative;  /* Esto asegura que puedas mover la imagen con respecto a su posición original */
+  left: -30px;  /* Ajusta este valor para mover la imagen más a la izquierda */
+  max-width: 100%;  /* Asegura que la imagen no se desborde */
+  height: auto;  /* Mantiene la proporción de la imagen */
+}
