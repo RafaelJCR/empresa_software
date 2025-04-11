@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Consulta de Diseño Web</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 15px 10%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #e50914;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #666;
+      margin-left: 20px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #e50914;
+    }
+
+    .hero {
+      background: url('assets/images/disenoweb-2.jpg') center/cover no-repeat;
+      height: 80vh;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      background: rgba(0, 0, 0, 0.5);
+      inset: 0;
+    }
+
+    .hero-content {
+      z-index: 1;
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .section {
+      padding: 60px 10%;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+      color: #111;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      max-width: 320px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      color: #e50914;
+      font-size: 1.5rem;
+      margin: 15px 0 5px;
+    }
+
+    .card p {
+      padding: 0 15px 20px;
+      color: #555;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 10%;
+      background: #222;
+      color: #fff;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      padding: 15px;
+      border-radius: 50%;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    .back-button {
+      background-color: #e50914;
+      color: white;
+      font-size: 1rem;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .back-button:hover {
+      background-color: #c20812;
+      transform: translateY(-2px);
+    }
+
+    .contact-button {
+      background-color: #25D366;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .contact-button:hover {
+      background-color: #1ebe5d;
+      transform: scale(1.05);
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">SUYD</div>
+      <div>
+        <a href="#">Inicio</a>
+        <a href="#consultas">Consultas</a>
+        <a href="index.html" style="color: rgb(0, 0, 0);">(Volver)</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Consulta tu Proyecto Web</h1>
+      <p>Te ayudamos a definir lo que necesitas para tu negocio y te damos una propuesta de diseño adaptada a tus necesidades.</p>
+    </div>
+  </section>
+
+  <section style="text-align: center; padding: 2rem 1rem;">
+    <a href="https://wa.me/8298826971?text=Quiero%20realizar%20una%20consulta%20para%20mi%20página%20web" target="_blank" 
+       class="contact-button">
+      💬 Realiza tu Consulta
+    </a>
+  </section>
+
+  <section class="section" id="consultas">
+    <h2>¿Cómo funciona nuestra consulta?</h2>
+    <p>En nuestra consulta, te orientamos sobre el diseño web más adecuado para tu negocio. Escuchamos tus necesidades, analizamos tu sector y te proponemos un diseño que ayudará a mejorar tu presencia online.</p>
+    <p><strong>¡Y lo mejor de todo!</strong> Si decides realizar la página web con nosotros, la consulta es totalmente gratuita y además te devolvemos el costo de la consulta al contratar el servicio.</p>
+
+    <h2>Beneficios de Consultar con Nosotros</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/images/mentor_en_programa.743x0-is.jpg" alt="Consultoría de Negocios">
+        <h3>Orientación Personalizada</h3>
+        <p>Te guiamos en todo el proceso de creación de tu página web, asegurándonos de que se adapte a tu visión.</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/interfaz-aplicacion-reserva-medica_23-2148559009.avif" alt="Diseño Web Atractivo">
+        <h3>Diseño Moderno</h3>
+        <p>Te ofrecemos un diseño profesional, moderno y funcional para atraer a más clientes y potenciar tu marca.</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/que-es-una-asesoria-contable.png" alt="Asesoría Completa">
+        <h3>Asesoría Completa</h3>
+        <p>Recibe recomendaciones basadas en las mejores prácticas para garantizar la efectividad de tu página web.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="text-align: center; margin-top: 2rem;">
+    <a href="index.html" class="back-button">⬅ Volver al Inicio</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SUYD | Todos los derechos reservados</p>
+  </footer>
+
+  <a href="https://wa.me/8298826971?text=Saludos,%20me%20gustaría%20realizar%20una%20consulta%20para%20mi%20página%20web." class="whatsapp-float" target="_blank">
+    <ion-icon name="logo-whatsapp"></ion-icon>
+  </a>
+
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+</body>
+</html>

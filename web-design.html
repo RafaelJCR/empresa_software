@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diseño Web Profesional</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 15px 10%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #e50914;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #666;
+      margin-left: 20px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #e50914;
+    }
+
+    .hero {
+      background: url('assets/images/disenoweb-2.jpg') center/cover no-repeat;
+      height: 80vh;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      background: rgba(0, 0, 0, 0.5);
+      inset: 0;
+    }
+
+    .hero-content {
+      z-index: 1;
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .section {
+      padding: 60px 10%;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+      color: #111;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      max-width: 320px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      color: #e50914;
+      font-size: 1.5rem;
+      margin: 15px 0 5px;
+    }
+
+    .card p {
+      padding: 0 15px 20px;
+      color: #555;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 10%;
+      background: #222;
+      color: #fff;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      text-decoration: none;
+      z-index: 999;
+    }
+
+    .whatsapp-float ion-icon {
+      font-size: 30px;
+    }
+
+    
+    .whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  font-size: 2rem;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+/* Menú superior discreto */
+.top-nav.light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    z-index: 999;
+    backdrop-filter: blur(6px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-button-light {
+    font-size: 0.95rem;
+    color: #444;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-button-light:hover {
+    background-color: #f0f0f0;
+    color: #e50914;
+}
+.back-button {
+  background-color: #e50914;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #c20812;
+  transform: translateY(-2px);
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo ">SUYD</div>
+      <div>
+        <a href="#">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#portafolio">Portafolio</a>
+        <a href="index.html" style="color: rgb(0, 0, 0);">(Volver)</a>
+
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Diseñamos tu página web</h1>
+      <p>Modernizamos y optimizamos tu presencia online para destacar tu marca y mejorar tu impacto digital.</p>
+    </div>
+  </section>
+<!-- Botón de Contactarnos al inicio -->
+<section style="text-align: center; padding: 2rem 1rem;">
+    <a href="https://wa.me/8298826971?text=Quiero%20contratar%20el%20servicio%20de%20dise%C3%B1o%20de%20web" target="_blank" 
+       class="contact-button">
+      💬 Contactarnos
+    </a>
+  </section>
+  
+  <style>
+    .contact-button {
+      background-color: #25D366;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+  
+    .contact-button:hover {
+      background-color: #1ebe5d;
+      transform: scale(1.05);
+    }
+  </style>
+  
+  <section class="section" id="servicios">
+    <h2>¿Qué hacemos?</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/images/diseño responsive-1.jpg" alt="Diseño Responsive">
+        <h3>Diseño Responsive</h3>
+        <p>Tu web se verá increíble en cualquier dispositivo. Adaptabilidad garantizada.</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/optimizacion-web-moviles-smarphones.jpg" alt="SEO y Marketing">
+        <h3>SEO y Posicionamiento</h3>
+        <p>Optimización para que tu web aparezca en los primeros resultados de búsqueda.</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/81637_25.png.webp" alt="Seguridad Web">
+        <h3>Seguridad Avanzada</h3>
+        <p>Implementamos buenas prácticas y protección contra amenazas comunes.</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/Soporte-Tecnico.png" alt="Mantenimiento Web">
+        <h3>Mantenimiento y Soporte</h3>
+        <p>Nos encargamos de mantener tu sitio actualizado y funcionando sin problemas.</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/blog-ui-ux-150223.jpg" alt="Experiencia de Usuario">
+        <h3>UX/UI Moderno</h3>
+        <p>Interfaces intuitivas y atractivas para una mejor experiencia de navegación.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="portafolio">
+    <h2>Proyectos Recientes</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/images/Roton-Personal-Portfolio-Website-Theme-Graphics-8561980-1-1-580x386.jpg" alt="Portafolio Profesional">
+        <h3>Portafolio Personal</h3>
+        <p>Diseñamos sitios para mostrar tus habilidades, trabajos o proyectos como profesional creativo.</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/restaurant-apps-examples-sm.png" alt="Web para restaurante">
+        <h3>Restaurante Interactivo</h3>
+        <p>Menú digital, reservas en línea y diseño acogedor para atraer clientes y mejorar la experiencia.</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/classlife-tour-home08.png" alt="Educación en línea">
+        <h3>Academia Online</h3>
+        <p>Plataforma educativa con registro de estudiantes, cursos digitales y acceso protegido por login.</p>
+      </div>
+    </div>
+  </section>
+  <section style="text-align: center; margin-top: 2rem;">
+    <a href="index.html" class="back-button">⬅ Volver al Inicio</a>
+  </section>
+  
+  <footer>
+    <p>&copy; 2025 SUYD | Todos los derechos reservados</p>
+  </footer>
+
+  <a href="https://wa.me/8298826971?text=Saludos,%20me%20gustaría%20contratar%20el%20servicio%20de%20actualizar%20mi%20software%20/%20página%20web." class="whatsapp-float" target="_blank">
+    <ion-icon name="logo-whatsapp"></ion-icon>
+  </a>
+
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+</body>
+</html>

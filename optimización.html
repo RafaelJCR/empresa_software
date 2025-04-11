@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Optimización y SEO Profesional</title>
+  <meta name="description" content="Haz que tu sitio web destaque en Google. SEO técnico, velocidad, contenido optimizado y más." />
+  <meta name="keywords" content="SEO, optimización web, velocidad, contenido SEO, posicionamiento Google" />
+  <meta name="author" content="SUYD" />
+
+  <link rel="stylesheet" href="estilos.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #ffffff;
+      padding: 15px 10%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #e50914;
+    }
+    nav a {
+      text-decoration: none;
+      color: #666;
+      margin-left: 20px;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #e50914;
+    }
+    .hero {
+      background: url('assets/images/seo-ll.webp') center/cover no-repeat;
+      height: 80vh;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      background: rgba(0, 0, 0, 0.5);
+      inset: 0;
+    }
+    .hero-content {
+      z-index: 1;
+      max-width: 800px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+    }
+    .section {
+      padding: 60px 10%;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+      color: #111;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      max-width: 320px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card h3 {
+      color: #e50914;
+      font-size: 1.5rem;
+      margin: 15px 0 5px;
+    }
+    .card p {
+      padding: 0 15px 20px;
+      color: #555;
+      font-size: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 10%;
+      background: #222;
+      color: #fff;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      font-size: 2rem;
+      padding: 15px;
+      border-radius: 50%;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transition: transform 0.3s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+    }
+    .whatsapp-float ion-icon {
+      font-size: 30px;
+    }
+    .contact-button {
+      background-color: #25D366;
+      color: white;
+      font-size: 1.1rem;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .contact-button:hover {
+      background-color: #1ebe5d;
+      transform: scale(1.05);
+    }
+    .back-button {
+      background-color: #e50914;
+      color: white;
+      font-size: 1rem;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .back-button:hover {
+      background-color: #c20812;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">SUYD</div>
+      <div>
+        <a href="#">Inicio</a>
+        <a href="#optimizacion">Optimización</a>
+        <a href="#casos">Casos</a>
+        <a href="index.html" style="color: black;">(Volver)</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Haz que tu sitio brille en Google</h1>
+      <p>Optimizamos tu web para alcanzar los primeros lugares en buscadores y mejorar la experiencia del usuario.</p>
+    </div>
+  </section>
+
+  <section style="text-align: center; padding: 2rem 1rem;">
+    <a href="https://wa.me/8298826971?text=Estoy%20interesado%20en%20los%20servicios%20de%20optimización%20y%20SEO" target="_blank" class="contact-button">
+      🔍 Solicita tu análisis SEO
+    </a>
+  </section>
+
+  <section class="section" id="optimizacion">
+    <h2>¿Cómo optimizamos?</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/images/velocidad-de-carga-web.svg" alt="Velocidad Web">
+        <h3>Velocidad de Carga</h3>
+        <p>Reducimos el tiempo de carga para mejorar la experiencia del usuario y el posicionamiento.</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/SEO-tecnico.png" alt="SEO Técnico">
+        <h3>SEO Técnico</h3>
+        <p>Mejoramos la estructura de tu sitio y solucionamos errores que afectan tu ranking.</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/3-claves-para-tu-estrategia-SEO-800x400-1.jpg" alt="Contenido SEO">
+        <h3>Contenido Optimizado</h3>
+        <p>Escribimos textos estratégicos con palabras clave que atraen y convierten.</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/mobile-seo-graphic.png" alt="SEO Móvil">
+        <h3>SEO Mobile</h3>
+        <p>Aseguramos que tu sitio sea rápido y funcional en cualquier dispositivo móvil.</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/link-building-glosario-de-terminos-la-bateria-recargable.jpg" alt="Enlaces SEO">
+        <h3>Linkbuilding</h3>
+        <p>Generamos enlaces de calidad que aumentan la autoridad de tu dominio.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="casos">
+    <h2>Resultados Reales</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/images/The-Content-Authority-YoY-Organic-Traffic-Growth.webp" alt="Caso A">
+        <h3>+300% Tráfico Orgánico</h3>
+        <p>Optimizamos una web con técnicas SEO y aumentamos su tráfico en menos de 90 días.</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/di9.jpg" alt="Caso B">
+        <h3>Auditoría Técnica</h3>
+        <p>Detectamos y corregimos más de 20 errores críticos que impedían su posicionamiento.</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/concepto-del-desarrollo-y-trabajo-de-carrera-123145502.webp" alt="Caso C">
+        <h3>Del fondo a la cima</h3>
+        <p>Pasamos de la página 7 a la primera en resultados para una palabra clave principal.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="text-align: center; margin-top: 2rem;">
+    <a href="index.html" class="back-button">⬅ Volver al Inicio</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SUYD | Todos los derechos reservados</p>
+  </footer>
+
+  <a href="https://wa.me/8298826971?text=Hola,%20quiero%20una%20auditoría%20SEO%20para%20mi%20sitio" class="whatsapp-float" target="_blank">
+    <ion-icon name="logo-whatsapp"></ion-icon>
+  </a>
+
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+</body>
+</html>

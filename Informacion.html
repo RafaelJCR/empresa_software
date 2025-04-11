@@ -1,0 +1,283 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Quiénes Somos? | SUYD</title>
+  <style> * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdfdfd;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  header {
+    background-color: #ffffff;
+    padding: 15px 10%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #e50914;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #666;
+    margin-left: 20px;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: #e50914;
+  }
+
+  .hero {
+    background: url('assets/images/disenoweb-2.jpg') center/cover no-repeat;
+    height: 80vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    inset: 0;
+  }
+
+  .hero-content {
+    z-index: 1;
+    max-width: 800px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .section {
+    padding: 60px 10%;
+  }
+
+  .section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    color: #111;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    max-width: 320px;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card h3 {
+    color: #e50914;
+    font-size: 1.5rem;
+    margin: 15px 0 5px;
+  }
+
+  .card p {
+    padding: 0 15px 20px;
+    color: #555;
+    font-size: 1rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 40px 10%;
+    background: #222;
+    color: #fff;
+  }
+
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    font-size: 2rem;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+  }
+
+  .back-button {
+    background-color: #e50914;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .back-button:hover {
+    background-color: #c20812;
+    transform: translateY(-2px);
+  }
+
+  .contact-button {
+    background-color: #25D366;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .contact-button:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.05);
+  }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">SUYD</div>
+      <div>
+        <a href="#">Inicio</a>
+        <a href="#quienes-somos">¿Quiénes Somos?</a>
+        <a href="#valores">Nuestro Compromiso</a>
+        <a href="index.html">(Volver)</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Conócenos Mejor</h1>
+      <p>Queremos ayudarte a confiar en nuestro equipo y sentirte seguro desde el primer contacto.</p>
+    </div>
+  </section>
+
+  <section style="text-align: center; padding: 2rem 1rem;">
+    <a href="https://wa.me/8298826971?text=Me%20gustaría%20saber%20más%20sobre%20ustedes%20y%20los%20servicios%20que%20ofrecen" target="_blank" class="contact-button">
+      💬 Habla con Nosotros
+    </a>
+  </section>
+
+  <section class="section" id="quienes-somos">
+    <h2>¿Quiénes somos?</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/images/image (3).webp" alt="Equipo profesional">
+        <h3>
+            COO (Chief Operating Officer)</h3>
+            <h3>
+                Adrian Ortiz Cedano </h3>
+        <p>Somos un grupo de profesionales del desarrollo y diseño web con experiencia y compromiso total.</p>
+      </div>
+      <div class="card">
+        <img src="readme-images/image__6_-removebg-preview.png" alt="Visión clara">
+        <h3>CEO (Chief Executive Officer)</h3>
+        <h3>Rafael Jose Cedano Rijo</h3>
+        <p>Buscamos ayudarte a crecer digitalmente, dándote soluciones claras, modernas y adaptadas a tu negocio.</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/Imagen de WhatsApp 2025-04-11 a las 18.18.31_715b39cc.jpg" alt="Confianza">
+        <h3>
+            CFO (Chief Financial Officer)</h3>
+            <h3>
+               Algenis Elias Cedeño</h3>
+        <p>Te explicamos cada paso, y te mostramos cómo será tu web antes de iniciar. Sin sorpresas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="valores">
+    <h2>Nuestro Compromiso Contigo</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/images/interconnect_banner_950x550.jpg" alt="Garantía cliente">
+        <h3>Consulta sin Riesgo</h3>
+        <p>Si haces la web con nosotros, la consulta es completamente gratis. ¡Te devolvemos el costo inicial!</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/RTB-Marketing-o-Real-Time-Bidding-definicion-como-funciona-y-cuales-son-sus-ventajas1.jpg" alt="Soporte al cliente">
+        <h3>Acompañamiento Real</h3>
+        <p>Desde la idea inicial hasta el lanzamiento, estamos contigo para que sientas seguridad y claridad.</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/procesos-de-seguridad-en-apps-moviles.webp" alt="Seguridad digital">
+        <h3>Seguridad y Profesionalismo</h3>
+        <p>Nos tomamos en serio tu información y tu confianza. Usamos buenas prácticas y comunicación directa.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="text-align: center; margin-top: 2rem;">
+    <a href="index.html" class="back-button">⬅ Volver al Inicio</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SUYD | Todos los derechos reservados</p>
+  </footer>
+
+  <a href="https://wa.me/8298826971?text=Hola,%20quiero%20conocer%20más%20sobre%20ustedes%20y%20los%20servicios%20que%20ofrecen" class="whatsapp-float" target="_blank">
+    <ion-icon name="logo-whatsapp"></ion-icon>
+  </a>
+
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+</body>
+</html>

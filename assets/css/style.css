@@ -1821,17 +1821,225 @@ textarea.input-field {
   height: auto;
   display: block;
 }
+.container {
+  text-align: left; /* Esto alinea el contenido a la izquierda */
+}
 
-.abs-img-scale-up-anim {
-  position: relative; /* Asegura que puedas mover la imagen sin afectar otros elementos */
-  left: -20px; /* Ajusta este valor según sea necesario */
+.btn.btn-hover a {
+  text-decoration: none; /* Evita subrayado en el enlace */
+  color: white; /* Asegura que el texto del enlace sea blanco */
+}
+/* Estilo general para el botón */
+.btn.btn-hover {
+  text-align: center; /* Centra el botón por defecto */
+  margin-left: auto;  /* Centra el botón horizontalmente */
+  margin-right: auto; /* Centra el botón horizontalmente */
+}
+
+/* Ajuste para pantallas más pequeñas (como celulares) */
+@media (max-width: 768px) {
+  .btn.btn-hover {
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Para pantallas más grandes, mantener centrado */
+@media (min-width: 769px) {
+  .btn.btn-hover {
+    margin-left: 0; /* Elimina el margen izquierdo para dejarlo alineado a la izquierda */
+    margin-right: 0; /* Elimina el margen derecho */
+  }
+}
+/* Asegura que la sección ocupe toda la altura de la pantalla */
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+  background-image: url('assets/images/wp11404483-4065396844.jpg');
+  background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+  background-position: center; /* Centra la imagen */
+  text-align: center; /* Asegura que el texto esté centrado */
+  padding: 0 15px; /* Ajusta el espacio horizontal */
+}
+
+/* Estilo del contenido dentro de la sección */
+.hero-content {
+  color: white; /* Color blanco para el texto */
+  max-width: 800px; /* Limita el tamaño del texto */
+  z-index: 2; /* Asegura que el texto se vea por encima de otros elementos */
+}
+
+/* Estilo de la imagen */
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px; /* Ajusta la distancia entre la imagen y el texto */
+  display: block; /* Hace que la imagen se comporte como bloque */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilo del botón */
+.btn.btn-hover {
+  display: inline-block;
+  margin-top: 30px; /* Añade espacio entre el texto y el botón */
+}
+
+
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .hero {
+    height: auto; /* La sección puede adaptarse a la altura del contenido */
+    padding: 50px 15px; /* Agrega espacio adicional en pantallas pequeñas */
+  }
+
+  .hero-content {
+    padding: 0 20px; /* Añade un poco de margen para evitar que el texto toque los bordes */
+  }
+
+  .hero-img {
+    width: 100%; /* La imagen tomará el 100% del ancho */
+    height: auto; /* Mantiene la proporción */
+    margin-top: 15px; /* Reduce el margen superior en pantallas pequeñas */
+  }
+
+  .btn.btn-hover {
+    width: 100%; /* Hace que el botón ocupe todo el ancho en dispositivos móviles */
+    text-align: center; /* Centra el texto del botón */
+    margin-top: 20px;
+  }
+}
+/* Estilos generales para la sección */
+.about-banner {
+  display: flex;
+  justify-content: center; /* Centra el contenido por defecto */
+  align-items: center; /* Centra el contenido verticalmente */
+  position: relative;
+}
+
+.abs-img {
   max-width: 100%;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .about-banner {
+    justify-content: flex-start; /* Alinea el contenido a la izquierda en pantallas pequeñas */
+  }
+
+  .abs-img {
+    margin-left: 0; /* Elimina el margen de la izquierda */
+    margin-right: 0; /* Elimina el margen de la derecha */
+    float: left; /* Alinea la imagen a la izquierda */
+    margin-top: 20px; /* Añade un poco de margen superior para un mejor ajuste */
+  }
+}
+/* Evitar el desbordamiento horizontal */
+body, html {
+  overflow-x: hidden; /* Esto previene que la página se desplace horizontalmente */
+  width: 100%;
+}
+
+/* Estilos generales para la sección */
+.about-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%; /* Asegura que el contenedor tenga el ancho completo */
+  overflow: hidden; /* Asegura que no haya desbordamiento dentro del contenedor */
+}
+
+/* Asegura que la imagen no exceda el ancho de su contenedor */
 .abs-img {
-  position: relative;  /* Esto asegura que puedas mover la imagen con respecto a su posición original */
-  left: -30px;  /* Ajusta este valor para mover la imagen más a la izquierda */
-  max-width: 100%;  /* Asegura que la imagen no se desborde */
-  height: auto;  /* Mantiene la proporción de la imagen */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .about-banner {
+    justify-content: flex-start; /* Alinea la imagen a la izquierda en pantallas pequeñas */
+  }
+
+  .abs-img {
+    margin-left: 0; /* Elimina el margen de la izquierda */
+    margin-right: 0; /* Elimina el margen de la derecha */
+    float: left; /* Alinea la imagen a la izquierda */
+    margin-top: 20px;
+  }
+  
+  /* Asegura que el contenedor no se desborde en dispositivos móviles */
+  .about-content {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.about-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.abs-img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .about-banner {
+    justify-content: flex-start;
+    padding-left: 0; /* Quitamos el espacio a la izquierda */
+  }
+
+  .abs-img {
+    margin-left: -22px; /* Ligeramente hacia fuera del contenedor */
+    width: 250px; /* Ajusta según el diseño */
+  }
+}
+
+
+
+.food-menu {
+  text-align: center;
+}
+
+.food-menu .section-subtitle,
+.food-menu .section-title,
+.food-menu .section-text {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px; /* Opcional: limita el ancho para que se vea más elegante */
+}
+.testi {
+  text-align: center;
+}
+
+.testi .section-subtitle,
+.testi .section-title,
+.testi .section-text {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px; /* Opcional: limita el ancho para una mejor legibilidad */
+}
+.testi {
+  text-align: center;
+}
+
+.testi .section-title,
+.testi .section-subtitle,
+.testi .section-text {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px; /* para que no sea tan ancho */
 }

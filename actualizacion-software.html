@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicio de Actualización de Software</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #121212;
+      --color-primary: #00ADB5;
+      --color-secondary: #393E46;
+      --color-accent: #EEEEEE;
+      --color-text: #FFFFFF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      color: var(--color-accent);
+    }
+
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    /* Intro */
+    .intro {
+      height: 100vh;
+      background: linear-gradient(rgba(18,18,18,0.8), rgba(18,18,18,0.8)), url('assets/images/software-1-e1550080087611-800x400.jpg') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .intro h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      color: #CCCCCC;
+    }
+
+    .cta-button {
+      background-color: var(--color-primary);
+      color: var(--color-text);
+      font-size: 1.1rem;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #00cfd7;
+    }
+
+    /* Servicios */
+    .services {
+      background-color: var(--color-secondary);
+      padding: 4rem 10%;
+      text-align: center;
+    }
+
+    .service-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .service-item {
+      background: #222831;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      width: 300px;
+      transition: transform 0.3s ease;
+    }
+
+    .service-item:hover {
+      transform: scale(1.05);
+    }
+
+    .service-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .service-title {
+      font-size: 1.5rem;
+      color: var(--color-primary);
+    }
+
+    .service-description {
+      color: #CCCCCC;
+      margin: 1rem 0;
+    }
+
+    .service-benefits {
+      list-style: none;
+      padding-left: 0;
+      color: #B0BEC5;
+    }
+
+    .service-benefits li {
+      margin-bottom: 10px;
+    }
+
+    /* App benefits */
+    .app-benefits {
+      background-color: #1f1f1f;
+      padding: 4rem 10%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .app-benefit-item {
+      width: 280px;
+      text-align: center;
+    }
+
+    .app-benefit-item img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .app-benefit-item h3 {
+      color: var(--color-primary);
+      margin-bottom: 10px;
+    }
+
+    /* Testimonios */
+    .testimonials {
+      background-color: #101010;
+      padding: 3rem 10%;
+      text-align: center;
+    }
+
+    .testimonial-item {
+      background: #2a2a2a;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 1rem auto;
+      max-width: 600px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .testimonial-item p {
+      color: #CCCCCC;
+    }
+
+    .testimonial-item h3 {
+      margin-top: 10px;
+      color: var(--color-primary);
+    }
+
+    /* FAQ */
+    .faq {
+      background-color: #181818;
+      padding: 3rem 10%;
+    }
+
+    .faq-item {
+      background: #242424;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .faq-question {
+      padding: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      background: #2e2e2e;
+      border-left: 5px solid var(--color-primary);
+    }
+
+    .faq-answer {
+      padding: 15px;
+      display: none;
+      background-color: #333;
+      color: #CCCCCC;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    /* Footer */
+    footer {
+      background: #000;
+      color: var(--color-accent);
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .social-links ion-icon {
+      font-size: 1.8rem;
+      margin: 0 10px;
+      color: var(--color-accent);
+      transition: color 0.3s ease;
+    }
+
+    .social-links ion-icon:hover {
+      color: var(--color-primary);
+    }
+
+    @media (max-width: 768px) {
+      .intro {
+        height: auto;
+        padding: 4rem 2rem;
+      }
+      .service-list, .app-benefits {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  font-size: 2rem;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+/* Menú superior discreto */
+.top-nav.light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    z-index: 999;
+    backdrop-filter: blur(6px);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-button-light {
+    font-size: 0.95rem;
+    color: #444;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-button-light:hover {
+    background-color: #f0f0f0;
+    color: #e50914;
+}
+.contact-button {
+  background-color: #25D366;
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-button:hover {
+  background-color: #1ebe5d;
+  transform: scale(1.05);
+}
+
+
+  </style>
+</head>
+<a href="https://wa.me/8298826971" class="whatsapp-float" target="_blank" aria-label="Chatea por WhatsApp">
+    <ion-icon name="logo-whatsapp"></ion-icon>
+  </a>
+  
+  <nav class="top-nav light">
+    <div class="nav-container">
+      <a href="index.html" class="nav-button-light">← Volver al inicio</a>
+    </div>
+  </nav>
+s 
+      
+  <section class="intro">
+    <h1>Actualización de Software</h1>
+    <p>Mejora la eficiencia y seguridad de tu sistema con nuestro servicio personalizado. ¡Mantén tu software al día!</p>
+    <a href="https://wa.me/8298826971?text=Saludos%2C%20me%20gustar%C3%ADa%20contratar%20el%20servicio%20de%20actualizacion%20de%20mi%20software%20%2F%20p%C3%A1gina%20web." 
+    class="cta-button" 
+    target="_blank" 
+    rel="noopener noreferrer">
+    ¡Solicita una actualización ahora!
+ </a>
+ 
+  </section>
+
+  <section class="services">
+    <h2>¿Qué ofrecemos?</h2>
+    <div class="service-list">
+      <div class="service-item">
+        <img src="assets/images/optimizacion-del-rendimiento-web.jpg" alt="Rendimiento" class="service-image">
+        <h3 class="service-title">Optimización</h3>
+        <p class="service-description">Tu software más rápido, sin errores ni cuelgues.</p>
+        <ul class="service-benefits">
+          <li>Más velocidad</li>
+          <li>Menos fallos</li>
+          <li>Mejor experiencia</li>
+        </ul>
+      </div>
+      <div class="service-item">
+        <img src="assets/images/brecha-ciberrseguridad.jpg" alt="Seguridad" class="service-image">
+        <h3 class="service-title">Seguridad</h3>
+        <p class="service-description">Protección avanzada ante ciberataques.</p>
+        <ul class="service-benefits">
+          <li>Parches críticos</li>
+          <li>Privacidad reforzada</li>
+          <li>Menos riesgos</li>
+        </ul>
+      </div>
+      <div class="service-item">
+        <img src="assets/images/do-mobile-phone-app.jpg" alt="Personalización" class="service-image">
+        <h3 class="service-title">A tu medida</h3>
+        <p class="service-description">Actualizaciones adaptadas a ti.</p>
+        <ul class="service-benefits">
+          <li>Soluciones únicas</li>
+          <li>Asesoría profesional</li>
+          <li>Compatibilidad garantizada</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="app-benefits">
+    <div class="app-benefit-item">
+      <img src="assets/images/velocidad carga sitio web.jpg" alt="Velocidad">
+      <h3>Mayor Velocidad</h3>
+      <p>Carga más rápida y fluida en tus apps.</p>
+    </div>
+    <div class="app-benefit-item">
+      <img src="assets/images/shutterstock_2089503016-1.webp" alt="Seguridad">
+      <h3>Seguridad Robusta</h3>
+      <p>Tu app segura y actualizada.</p>
+    </div>
+    <div class="app-benefit-item">
+      <img src="assets/images/sistema-operativo.webp" alt="Compatibilidad">
+      <h3>Compatibilidad</h3>
+      <p>Funciona en todos los dispositivos actuales.</p>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Opiniones</h2>
+    <div class="testimonial-item">
+      <p>"Nuestro sistema es más ágil y estable después de su servicio. ¡Increíble mejora!"</p>
+      <h3>- CTO de TechCorp</h3>
+    </div>
+    <div class="testimonial-item">
+      <p>"Excelente atención y resultados. El equipo técnico es de primera."</p>
+      <h3>- CEO de InnovApps</h3>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq-item">
+      <div class="faq-question">¿Cuánto tiempo toma?</div>
+      <div class="faq-answer">Entre 1 a 3 días, dependiendo del sistema.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">¿Incluye soporte técnico?</div>
+      <div class="faq-answer">Sí, durante y después de la actualización.</div>
+    </div>
+  </section>
+
+
+  <section style="text-align: center; margin-top: 2rem;">
+    <a href="index.html" class="back-button">⬅ Volver al Inicio</a>
+  </section>
+  
+  <footer>
+    <p>&copy; 2025 Actualización de Software. Todos los derechos reservados.</p>
+    <div class="social-links">
+      <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+      <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+    </div>
+    
+  </footer>
+
+  <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+  <script>
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
