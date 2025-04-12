@@ -2033,3 +2033,21 @@ body, html {
   max-width: 1200px; /* Define el tamaño máximo de la imagen */
   height: auto; /* Mantiene las proporciones de la imagen */
 }
+.delivery-banner {
+  text-align: center; /* Centra la imagen */
+  margin: 0 auto; /* Asegura que el contenido esté centrado horizontalmente */
+  width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho */
+}
+
+.delivery-banner img {
+  width: 100%; /* Hace que la imagen ocupe el 100% del contenedor */
+  max-width: 1200px; /* Define el tamaño máximo de la imagen */
+  height: auto; /* Mantiene las proporciones de la imagen */
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .delivery-banner img {
+      max-width: 100%; /* Asegura que la imagen ocupe el 100% del contenedor en móviles */
+  }
+}
