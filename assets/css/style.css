@@ -2021,3 +2021,15 @@ body, html {
   margin-right: auto;
   max-width: 700px; /* Opcional: limita el ancho para que se vea más elegante */
 }
+
+.delivery-banner {
+  text-align: center; /* Centra la imagen */
+  margin: 0 auto; /* Asegura que el contenido esté centrado horizontalmente */
+  width: 80%; /* Ajusta el tamaño de la imagen */
+}
+
+.delivery-banner img {
+  width: 100%; /* Hace que la imagen ocupe el 100% del contenedor */
+  max-width: 1200px; /* Define el tamaño máximo de la imagen */
+  height: auto; /* Mantiene las proporciones de la imagen */
+}
