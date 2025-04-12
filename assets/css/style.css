@@ -2057,3 +2057,18 @@ body, html {
       max-width: 100%; /* Asegura que la imagen ocupe el 100% del contenedor en móviles */
   }
 }
+
+  /* Estilo por defecto para escritorio */
+  .section-subtitle {
+    font-size: 34px;
+    margin-left: 205px;
+  }
+
+  /* Estilo para móviles */
+  @media (max-width: 768px) {
+    .section-subtitle {
+      font-size: 24px;
+      margin-left: 0;
+      text-align: center;
+    }
+  }
